@@ -468,6 +468,8 @@ __attribute__((swift_name("NotepadClient")))
 - (void)importMemoProgress:(void (^)(NKInt *))progress success:(void (^)(NKMemoData *))success error:(void (^)(NKFailure *))error __attribute__((swift_name("importMemo(progress:success:error:)")));
 - (void)deleteMemoComplete:(void (^)(void))complete error:(void (^)(NKFailure *))error __attribute__((swift_name("deleteMemo(complete:error:)")));
 - (void)upgradeWith:(NSString *)with version:(NKVersion *)version progress:(void (^)(NKInt *))progress complete:(void (^)(void))complete error:(void (^)(NKFailure *))error __attribute__((swift_name("upgrade(with:version:progress:complete:error:)")));
+@property (readonly) int32_t width __attribute__((swift_name("width")));
+@property (readonly) int32_t height __attribute__((swift_name("height")));
 @property id<NKNotepadClientCallback> _Nullable callback __attribute__((swift_name("callback")));
 @property (readonly) NKKotlinByteArray * _Nullable authToken __attribute__((swift_name("authToken")));
 @end;
