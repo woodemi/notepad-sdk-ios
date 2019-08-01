@@ -556,6 +556,31 @@ __attribute__((swift_name("NotepadConnector")))
 @end;
 
 __attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("LongTagValue")))
+@interface NKLongTagValue : KotlinBase
+- (instancetype)initWithTag:(int16_t)tag value:(NKKotlinByteArray *)value __attribute__((swift_name("init(tag:value:)"))) __attribute__((objc_designated_initializer));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+- (int16_t)component1 __attribute__((swift_name("component1()")));
+- (NKKotlinByteArray *)component2 __attribute__((swift_name("component2()")));
+- (NKLongTagValue *)doCopyTag:(int16_t)tag value:(NKKotlinByteArray *)value __attribute__((swift_name("doCopy(tag:value:)")));
+@property (readonly) NKKotlinByteArray *bytes __attribute__((swift_name("bytes")));
+@property (readonly) int16_t tag __attribute__((swift_name("tag")));
+@property (readonly) NKKotlinByteArray *value __attribute__((swift_name("value")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("LongTagValue.Companion")))
+@interface NKLongTagValueCompanion : KotlinBase
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
++ (instancetype)companion __attribute__((swift_name("init()")));
+- (NSDictionary<NKInt *, NKLongTagValue *> *)scanBytes:(NKKotlinByteArray *)bytes __attribute__((swift_name("scan(bytes:)")));
+@property (readonly) int32_t HEADER_LENGTH __attribute__((swift_name("HEADER_LENGTH")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("Sample")))
 @interface NKSample : KotlinBase
 - (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
