@@ -613,6 +613,7 @@ __attribute__((swift_name("KotlinByteArray")))
 @interface NKKotlinByteArray (Extensions)
 - (BOOL)startWithPrefix:(NKKotlinByteArray *)prefix __attribute__((swift_name("startWith(prefix:)")));
 - (NKKotlinx_serialization_runtimeByteBuffer *)toByteBuffer __attribute__((swift_name("toByteBuffer()")));
+- (NSString *)encodeHex __attribute__((swift_name("encodeHex()")));
 - (NSData *)toNSData __attribute__((swift_name("toNSData()")));
 @end;
 
@@ -667,6 +668,7 @@ __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("ByteArray_ExtensionsKt")))
 @interface NKByteArray_ExtensionsKt : KotlinBase
 + (NKKotlinx_serialization_runtimeByteBuffer *)toByteBuffer:(NSArray<NKByte *> *)receiver __attribute__((swift_name("toByteBuffer(_:)")));
++ (NSString *)encodeHex:(id)receiver __attribute__((swift_name("encodeHex(_:)")));
 + (NKKotlinByteArray *)decodeHex:(NSString *)receiver __attribute__((swift_name("decodeHex(_:)")));
 + (NKKotlinByteArray *)toByteArray:(int16_t)receiver byteOrder:(NKKotlinx_serialization_runtimeByteOrder *)byteOrder __attribute__((swift_name("toByteArray(_:byteOrder:)")));
 + (NKKotlinByteArray *)toByteArray:(int32_t)receiver byteOrder_:(NKKotlinx_serialization_runtimeByteOrder *)byteOrder __attribute__((swift_name("toByteArray(_:byteOrder_:)")));
